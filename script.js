@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 显示文章预览
     function showArticlePreview(article) {
-        articlePreview.innerHTML = `
-            <h2>${article.title}<br></h2>
+        articlePreview.innerHTML = `                     
+            <h2><a href="${article.link}" target="_blank">${article.title}</a></h2>         
             <p>${article.summary}<br></p>
-            <p><a href="${article.link}" target="_blank">阅读全文 → 《${article.title}》</a></p>
+            <p><a href="${article.link}" target="_blank">开始阅读 → 《${article.title}》</a></p>   
         `;
     }
 });
