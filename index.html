@@ -1,34 +1,48 @@
-﻿<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <title>迷失在森林</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>大师的内心游戏</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <header>
+        <h1>大师的内心游戏</h1>
+        <nav>
+            <a href="index.html" class="active">首 页</a>
+            <a href="index.html">____</a>
+            <a href="assets/about.html">关于</a>
+            
+        </nav>
+    </header>
+    
+    <main class="container">
+        <aside class="sidebar">
+            <h2>欢迎来到互动小说发布网页</h2>
+            <p>这是一个欣赏互动叙事小说故事的地方。互动叙事小说（Interactive Fiction, IF）作为融合文学与游戏的特殊载体，其核心特点在于非线性叙事与玩家决策的深度结合。</p>
+            <hr>
+            <h3>互动故事目录</h3>
+            <ul id="article-list">
+                <!-- 文章列表将通过JavaScript动态生成 -->
+            </ul>
+        </aside>
+        <i>点击标题可以查看故事简介</i>
+        <hr>
+        <section class="content">
+            
+            <article id="article-preview">
+                <h2>欢迎来到简约博客</h2>
+                <p>这是一个响应式的双栏博客布局，点击左侧文章目录查看详细内容。</p>
+                <p>点击文章标题可以查看完整文章。</p>
+            </article>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2025 北京39街区数字创意工作室  保留所有权利</p>
+    </footer>
 
-    <div class="outerContainer">
-        <h3 class="written-in-ink"><a href="https://www.inklestudios.com/ink">WRITTEN IN INK</a></h3>
-
-        <div id="controls" class="buttons">
-          <a id="rewind" title="Restart story from beginning">restart重启</a>
-          <a id="save" title="Save progress">save保存</a>
-          <a id="reload" title="Reload from save point">load加载</a>
-          <a id="theme-switch" title="Switch theme">theme主题</a>
-        </div>
-
-        <div id="story" class="container">
-            <div class="header">
-                <h1>迷失在森林</h1>
-                <h2 class="byline"></h2>
-            </div>
-        </div>
-    </div>
-
-    <script src="ink.js"></script>
-    <script src="迷失在森林.js"></script>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
