@@ -159,12 +159,12 @@ footer {
 /* 字体定义 */
 @font-face {
     font-family: 'SimFang';
-    src: url('../fonts/simfang.ttf') format('truetype');
+    src: url('fonts/simfang.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'SimLi';
-    src: url('../fonts/SIMLI.TTF') format('truetype');
+    src: url('fonts/SIMLI.TTF') format('truetype');
 }
 
 body {
