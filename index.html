@@ -3,42 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>大师的内心游戏</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>互动小说——现代艺术与创意数智的交汇</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>大师的内心游戏</h1>
-        <nav>
-            <a href="index.html" class="active">首 页</a>
-            <a href="index.html">　</a>
-            <a href="assets/about.html">关于</a>            
-        </nav>
-    </header>
+    <!-- 背景图容器 -->
+    <div class="background-container"></div>
     
-    <main class="container">
-        <aside class="sidebar">
-            <h2>欢迎来到互动小说发布网页</h2>
-            <p>这是一个欣赏互动叙事小说故事的精神家园。互动叙事（Interactive Fiction, IF）集文学欣赏与娱乐游戏于一身。<br>其精髓在于非线性叙事与读者决策的深度结合来模拟现实——沉浸式休闲；游戏中学习。</p>
-            <hr>
-            <i>点击目录查看故事提要</i>
-            <h3>目录</h3>
-            <ul id="article-list">
-                <!-- 文章列表将通过JavaScript动态生成 -->
-            </ul>
-        </aside>
-        <i>点击标题互动故事开始</i>
-        <h3></h3>
-        <section class="content">            
-            <article id="article-preview">                
-               <!-- 通过JavaScript动态生成 -->
-            </article>
-        </section>
-    </main>
-    <hr>
-    <footer>
-        <p>&copy; 2025 北京39街区数字创意工作室  保留所有权利</p>
-    </footer>
+    <!-- 内容容器 -->
+    <div class="content-container">
+        <header>
+            <h1 class="main-title">大师的内心游戏</h1>
+            <p class="subtitle">探索数智与艺术创意的无限可能</p>
+        </header>
+        
+        <main>
+            <section class="articles">
+                <h2 class="section-title" style="text-align: center;">沉浸式交互叙事小说集</h2>
+                <div id="articles-container" class="article-grid"></div>
+            </section>
+        </main>
+        
+        <section class="additional-info info">
+            <p>互动小说平台，这里融合了现代艺术与数智创意，为您带来全新的体验。分支式非线性互动剧情体小说。</p>
+            <p>在这里，您可以选择不同的故事路径，体验多样化的叙事方式。每个选择都将引导您进入一个独特的故事世界。</p>
+            <p>请随时探索我们的作品，并与我们分享您的想法和反馈！</p>
+            <br><hr>
+            <p><i>联系方式：传习者戚wechat13381025223；　qijiuzhu@tsinghua.org.cn　编著者：戚九柱</i>
+            </section>
+
+        <footer>
+            <p>&copy; 2025. 北京数智第三创意工作室. 保留所有权利.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
