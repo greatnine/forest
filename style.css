@@ -214,4 +214,17 @@ body {
 }
 
 
-/* 其他样式保持与之前相同... */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+    background-image: url('images/photo-light.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: none;
+    z-index: -1;
+}
+
