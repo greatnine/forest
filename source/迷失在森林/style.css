@@ -127,7 +127,7 @@ h2 {
   background-repeat: no-repeat;
 }
 .outerContainer h3 {
-  font-size: large;
+  font-size:larger;
 }
 @media screen and (max-width: 980px) {
   .outerContainer {
