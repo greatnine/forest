@@ -1,6 +1,3 @@
-// story.json
-const articlesData = 
-//---------------------------------------------------------------------故事信息
 [
     {
         "date": "2024年2月3日",
@@ -8,12 +5,15 @@ const articlesData =
         "summary": "这个故事发生在一个神秘的森林中，主角是一名年轻的探险者。故事围绕着主角在森林中的冒险经历展开，玩家需要通过选择不同的对话和行动来推动故事的发展。在这个过程中，主角遇到了各种各样的挑战和谜题，需要运用智慧和勇气来克服困难。",
         "link": "source/迷失在森林/index.html"
     },
+
     {
         "date": "2024年4月28日",
         "title": "互动故事——夫妻共管",
-        "summary": "这是一个以夫妻共同管理家庭事务为主题的互动故事。玩家将扮演夫妻中的一员，通过选择决策，体验在家庭管理、沟通与协作中的挑战与成长。当然故事作者鼓励玩家思考家庭成员间的理解、信任与分工，最终实现家庭的和谐与幸福。",
+        "summary": "这是一个以夫妻共同管理家庭事务为主题的互动故事。玩家将扮演夫妻中的一员，通过选择不同的对话和决策，体验在家庭管理、沟通与协作中的挑战与成长。故事鼓励玩家思考家庭成员间的理解、信任与分工，最终实现家庭的和谐与幸福。",
         "link": "source/夫妻共管/index.html"
     },
+
+    
     {
         "date": "2024年11月10日",
         "title": "互动小说——假马脱缎（骗术）",
@@ -32,40 +32,4 @@ const articlesData =
         "summary": "这个故事发生在二战时期英国布莱切利公园。主角是一位参与破解德军密码机Bombe的天才数学家。故事以主角被怀疑为叛徒、被隔离审讯为开端，围绕失踪密码机关键部件展开。<br>在审讯过程中，主角通过与审讯官的对话，逐渐揭开了一个更大的阴谋……",
         "link": "source/TheIntercept/index.html"
     },
-]/* -------------------------------------------------------------------故事信息
-
-
-
-
-
-
-
-
-
-
-
-
-*/// 文章数据示例
-document.addEventListener('DOMContentLoaded', () => {  
-    const articlesContainer = document.getElementById('articles-container');
-    // 动态生成文章卡片
-    articlesData.forEach(article => {
-        const articleCard = document.createElement('article');
-        articleCard.className = 'article-card';
-        articleCard.innerHTML = `
-            <h3><a href="${article.link}">${article.title}</a></h3>
-            <p class="preview">${article.summary}</p>            
-            <p class="date">${article.date}</p>
-            <p><a href="${article.link}" target="_blank">开始互动体验 → 《${article.title}》</a></p>  
-        `;
-        articlesContainer.appendChild(articleCard);
-    });
-
-    // 添加入场动画
-    setTimeout(() => {
-        document.querySelectorAll('.article-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.3}s`;
-            card.classList.add('fade-in');
-        });
-    }, 500);
-});
+]

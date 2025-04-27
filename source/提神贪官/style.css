@@ -90,9 +90,7 @@ h2 {
     background-repeat: no-repeat;
 }
 
-.outerContainer h3 {
-    font-size:larger;
-}
+
 
 
 @media screen and (max-width: 980px) {
@@ -700,3 +698,6 @@ body.dark {
     border-color: #e6a01c;
     box-shadow: 0 0 5px rgba(204, 143, 26, 0.5);
 }
+.outerContainer {
+    height: 90%;
+  }
