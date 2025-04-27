@@ -50,6 +50,7 @@ header {
     padding: 2rem 0;
     margin-bottom: 3rem;
     animation: fadeInDown 1s ease-out;
+    background-image: url('images/header.jpg');
 }
 
 header h1 {
@@ -65,7 +66,6 @@ header h1 {
 .subtitle {
     font-size: 1.5rem;
     color: #666;
-    opacity: 0;
     animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
@@ -99,7 +99,7 @@ header h1 {
 .article-card h3 {
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-    color: #333;
+    color: #4b2303;
 }
 
 .article-card h3 a {

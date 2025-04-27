@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3><a href="${article.link}">${article.title}</a></h3>
             <p class="preview">${article.summary}</p>            
             <p class="date">${article.date}</p>
-            <p><a href="${article.link}" target="_blank">开始阅读 → 《${article.title}》</a></p>  
+            <p><a href="${article.link}" target="_blank">开始互动体验 → 《${article.title}》</a></p>  
         `;
         articlesContainer.appendChild(articleCard);
     });
