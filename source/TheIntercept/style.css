@@ -388,6 +388,9 @@ footer {
   bottom: 0;
   width: 100%;
   z-index: 10;
+  box-sizing: border-box;
+  min-height: 2.5em;      /* 新增，确保有足够高度 */
+  line-height: 1.5em;     /* 新增，增加行高 */
 }
 body.dark footer {
   background: #222;
