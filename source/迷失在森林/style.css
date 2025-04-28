@@ -374,3 +374,21 @@ a:hover {
 .outerContainer {
   height: 90%;
 }
+
+
+/* Footer styles for the bottom of the page */
+footer {
+  text-align: center;
+  font-size: 10pt;
+  color: #888;
+  background: white;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+body.dark footer {
+  background: #222;
+  color: #bbb;
+}

@@ -698,6 +698,9 @@ body.dark {
     border-color: #e6a01c;
     box-shadow: 0 0 5px rgba(204, 143, 26, 0.5);
 }
+
+
+/* 选择框样式 防止iphone手机底部显示不全 */
 .outerContainer {
     height: 90%;
   }

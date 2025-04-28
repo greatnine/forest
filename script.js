@@ -28,8 +28,8 @@ const articlesData =
     },
     {
         "date": "2024年11月10日",
-        "title": "谍报惊险互动小说——截获（英文）",
-        "summary": "这个故事发生在二战时期英国布莱切利公园。主角是一位参与破解德军密码机Bombe的天才数学家。故事以主角被怀疑为叛徒、被隔离审讯为开端，围绕失踪密码机关键部件展开。<br>在审讯过程中，主角通过与审讯官的对话，逐渐揭开了一个更大的阴谋……",
+        "title": "谍报惊险互动小说——截获（英文）<br>The Intercept",
+        "summary": "这个故事发生在二战时期英国布莱切利公园。主角是一位参与破解德军密码机Bombe的天才数学家。故事以主角被怀疑为叛徒、被隔离审讯为开端，围绕失踪密码机关键部件展开……<br>This story took place in Bletchley Park, England during World War II. The protagonist is a genius mathematician who participates in cracking the German cipher machine Bombe. The story begins with the protagonist being suspected of being a traitor and being quarantined for interrogation, and revolves around the key components of the missing password machine. ...",
         "link": "source/TheIntercept/index.html"
     },
 ]/* -------------------------------------------------------------------故事信息
