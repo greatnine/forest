@@ -1,207 +1,181 @@
-/*----------------------------------------------------
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>夫妻共管</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    /* 响应式 Web 设计 – Viewport */
-
-/*<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="outerContainer">
-        <h3 class="written-in-ink"><a href="https://www.inklestudios.com/ink">WRITTEN IN INK</a></h3>
-        <div id="controls" class="buttons">
-          <a id="rewind" title="Restart story from beginning">restart</a>
-          <a id="save" title="Save progress">save</a>
-          <a id="reload" title="Reload from save point">load</a>
-          <a id="theme-switch" title="Switch theme">theme</a>
-        </div>
-        <div id="story" class="container">
-            <div class="header">
-                <h1>夫妻共管</h1>
-                <h3 class="byline">一个互动故事示例</h3>   /* byline: 标题下署名*/
-/*      </div>
-        </div>
-    </div>
-    <script src="ink.js"></script>
-    <script src="夫妻共管.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
----------------------------------------------------------
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
 
-/*----------------------------------------------------
-//标签选择器，即以 HTML 标签作为 CSS 修饰所用的选择器 h1; h2
----------------------------------------------------------*/
 body {
-  /*//网页的背景*/
-  font-family: 'Open Sans', sans-serif;
-  font-weight: normal; /*font-weight:normal; font-weight:bold;//加粗; //font-weight:lighter;*/
-  background: white;
-  overflow: hidden; /*隐藏元素 - display:none 或 visibility:hidden	*/
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    font-weight: normal;
+    background: white;
+    overflow: hidden;
 }
 
-body.switched {
-  transition: color 0.6s, background-color 0.6s;
+@media screen and (prefers-reduced-motion: no-preference) {
+    body.switched {
+        transition: color 0.6s, background-color 0.6s;
+    }
 }
 
 h1,
 h2 {
-  text-align: center;
-  font-family: 'Quattrocento', Georgia, 'Times New Roman', Times, serif; /*/指定多个字体*/
-  margin: 0;
-  padding: 0;
+    text-align: center;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  font-size: 30pt;
-  margin-bottom: 10px;
+    font-size: 30pt;
+    margin-bottom: 10px;
 }
 
 h2 {
-  font-size: 14pt;
-  font-style: italic; /*font-style: italic; normal; //font-style:oblique;//倾斜（oblique）*/
-  font-family: sans-serif;
-  font-weight: lighter;
-  color: #bbb;
+    font-size: 14pt;
+    font-style: italic;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    font-weight: lighter;
+    color: #BBB;
 }
 
 .header {
-  /*/<div class="header"> //标题占据的位置*/
-  padding-top: 3em;
-  padding-bottom: 3em; /*/单边内边距属性:padding-top:;padding-bottom定义元素边框与元素内容之间的空间。*/
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
-/* class 选择器
+/*
   Built-in class:
     # author: Name
-点开头的是类选择器*/
-
+*/
 .byline {
-  /* byline: 标题下署名*/
-  font-style: normal; /*/italic;*/
+    font-style: italic;
 }
 
 .written-in-ink {
-  /*/<h3 class="written-in-ink"><a href="https://www.inklestudios.com/ink">WRITTEN IN INK</a></h3>*/
-  z-index: 3;
-  font-size: 9pt;
-  font-family: sans-serif;
-  text-align: center;
-  font-weight: 700;
-  position: fixed; /*/position: fixed; 即使窗口是滚动的它也不会移动：*/
+    z-index: 3;
+    font-size: 9pt;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    text-align: center;
+    font-weight: 700;
+    position: fixed;
+    display: block;
+    width: 100%;
+    background: white;
+    margin: 0;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 14px;
+    top: 0;
+}
 
-  display: block;
-  width: 100%;
-  background: white;
-  transition: color 0.6s, background 0.6s;
-  margin: 0;
-  padding-top: 10px; /*/padding-top: 6px;*/
-  padding-bottom: 6px;
-  height: 14px;
-  top: 0;
+@media screen and (prefers-reduced-motion: no-preference) {
+    .written-in-ink {
+        transition: color 0.6s, background 0.6s;
+    }
 }
 
 /* 
   Enables <iframe> support work on itch.io when using mobile iOS
 */
 .outerContainer {
-  position: absolute;
-  display: block;
-  margin: 0;
-  padding: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow: scroll;
-  overflow-x: hidden;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin-top: 24px;
-  background-size: cover;
-  background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 95%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 980px) {
-  .outerContainer {
-    margin-top: 44px;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+    .outerContainer {
+        margin-top: 44px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
 .container {
-  display: block;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  padding-top: 4em;
-  background: white;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+    /* background: white; */
 }
 
-.switched .container {
-  transition: background-color 0.6s;
+@media screen and (prefers-reduced-motion: no-preference) {
+    .switched .container {
+        transition: background-color 0.6s;
+    }
 }
 
-/*----------------------------------------
-p网页正式文本
------------------------------------------*/
 p {
-  font-size: 13pt;
-  color: #838181; /*color: Black;     //color: Blue;    //color: #888; 单行注释 */
-  line-height: 1.7em; /* 用em来设置字体大小 1em的默认大小是16px。*/
-  font-weight: lighter;
+    font-size: 13pt;
+    color: #888;
+    line-height: 1.7em;
+    font-weight: normal;
 }
 
-/*--------------------------------------
-链接样式
-链接的样式，可以用任何 CSS 属性（如颜色，字体，背景等）。特别的链接，可以有不同的样式，这取决于他们是什么状态。
-这四个链接状态是：
-a:link - 正常，未访问过的链接
-a:visited - 用户已访问过的链接
-a:hover - 当用户鼠标放在链接上时
-a:active - 链接被点击的那一刻
-----------------------------------------*/
 a {
-  font-weight: 700;
-  color: #b97c2c;
-  font-family: sans-serif;
-  transition: color 0.6s;
-  text-decoration: none;
+    font-weight: 700;
+    color: #b97c2c;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    text-decoration: none;
+}
+
+.unclickable {
+    font-weight: 700;
+    color: #4f3411;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    text-decoration: none;
+    cursor: not-allowed;
 }
 
 a:hover {
-  color: rgb(0, 0, 0);
-  transition: color 0.1s;
+    color: black;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    a {
+        transition: color 0.6s;
+    }
+
+    a:hover {
+        transition: color 0.1s;
+    }
 }
 
 strong {
-  color: black;
-  font-weight: bold;
+    color: black;
+    font-weight: bold;
 }
 
 img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .container .hide {
-  opacity: 0;
+    opacity: 0.0;
 }
 
 .container .invisible {
-  display: none;
+    display: none;
 }
 
-.container > * {
-  opacity: 1;
-  transition: opacity 1s;
+.container>* {
+    opacity: 1.0;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .container>* {
+        transition: opacity 1.0s;
+    }
 }
 
 /*
@@ -209,21 +183,22 @@ img {
   (Will always appear inside <p> element by default.)
 */
 .choice {
-  text-align: center;
-  line-height: 1.7em;
+    text-align: center;
+    line-height: 1.7em;
 }
 
 /* 
   Class applied to first choice
 */
-:not(.choice) + .choice {
-  padding-top: 1em; /* padding填充 1em的默认大小是16px。*/
+:not(.choice)+.choice {
+    padding-top: 1em;
 }
 
-/*  Class applied to choice links */
-.choice a {
-  font-size: 13pt; /* 原来的 15pt;*/
-  /*font-weight: lighter;	*/ /*原无	*/
+/*
+  Class applied to choice links
+*/
+.choice a, .choice span {
+    font-size: 15pt;
 }
 
 /* 
@@ -231,142 +206,492 @@ img {
     The End # CLASS: end
 */
 .end {
-  text-align: center;
-  font-weight: bold;
-  color: black;
-  padding-top: 20px;
-  padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-/*----------------------------------------------------------------
-HTML 元素以 id 属性来设置 id 选择器,CSS 中 id 选择器以 # 来定义。
------------------------------------------------------------------*/
 #controls {
-  /*id 选择器  #    -------<div id="controls" class="buttons">*/
-  z-index: 4;
-  font-size: 9pt;
-  text-align: center;
-  padding-bottom: 6px;
-  position: fixed;
-  right: 14px;
-  top: 10px; /* 原来是 top: 4px;<div id="controls" class="buttons">的位置*/
-  user-select: none;
-  background: white;
-  transition: color 0.6s, background 0.6s;
+    z-index: 4;
+    font-size: 9pt;
+    text-align: center;
+    padding-bottom: 6px;
+    position: fixed;
+    right: 14px;
+    top: 4px;
+    -webkit-user-select: none;
+    user-select: none;
+    background: white;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    #controls {
+        transition: color 0.6s, background 0.6s;
+    }
 }
 
 #controls [disabled] {
-  /*id 选择器: #controls*/
-  color: #ccc;
+    color: #ccc;
 }
 
-#controls > *:not(:last-child):after {
-  content: ' | ';
+#controls>*:not(:last-child):after {
+    content: " | ";
 }
 
 @media screen and (max-width: 980px) {
-  /* 浏览器屏幕上显示 @media 规则允许在相同样式表为不同媒体设置不同的样式。*/
-  #controls {
-    z-index: 2;
-    padding-top: 24px;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+    #controls {
+        z-index: 2;
+        padding-top: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
-/* ---------------------------------------------
+/* 
   Dark Theme (Added in Inky 0.10.0)
     # theme: dark
------------------------------------------------*/
+*/
 
 body.dark {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
 
 .dark h2 {
-  color: #666;
+    color: #666;
 }
 
 .dark .container {
-  background: black;
+    background: black;
 }
 
 .dark .written-in-ink {
-  background: black;
+    background: black;
 }
 
 .dark a {
-  color: #cc8f1a;
-  transition: color 0.6s;
+    color: #cc8f1a;
+}
+.dark .unclickable{
+    color: #c4af87;
+    cursor:not-allowed;
 }
 
 .dark a:hover {
-  color: white;
+    color: white;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .dark a {
+        transition: color 0.6s;
+    }
 }
 
 .dark strong {
-  color: white;
+    color: white;
 }
 
 .dark #controls [disabled] {
-  color: #444;
+    color: #444;
 }
 
 .dark .end {
-  color: white;
+    color: white;
 }
 
 .dark #controls {
-  background: black;
+    background: black;
 }
 
-/* --------------------------------------- 
-/* 更改原样式后加
-/*---------------------------------------*/
-
-h3 {
-  /*自己加的h3*/
-  font-weight: lighter;
-  text-align: center;
-}
-/* 浅色主题样式 */
-/*body.light p {
-  font-size: 13pt;
-  color: #1d1d1d;
-  line-height: 1.7em;
-  font-weight: normal;
-}*/
-
-p {
-  font-size: 12pt; /*13pt;*/
-  color: rgb(39, 38, 38); /* Black;  Blue;  */
-  line-height: 1.7em; /* 用em来设置字体大小 1em的默认大小是16px。*/
-  font-weight: normal; /*lighter;	*/
-}
-/*
- 深色主题样式 */
-body.dark p {
-  font-size: 12pt;
-  color: rgb(202, 197, 197);
-  line-height: 1.7em;
-  font-weight: normal;
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
 }
 
-/*
-  Class applied to choice links */
-.choice a {
-  font-size: 13pt; /* 原来的 15pt;*/
-  font-weight: normal; /*lighter;*/ /*原无	*/
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
-/*  
-    hover 鼠标落在选择 */
-a:hover {
-  color: rgb(60, 32, 219);
-  transition: color 0.1s;
+.modal-container {
+    background-color: white;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.2s ease-out;
 }
-.dark a:hover {
-  color: rgb(117, 237, 84);
+
+.dark .modal-container {
+    background-color: #222;
+    color: white;
+}
+
+.modal-overlay.hidden .modal-container {
+    transform: translateY(20px);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 8px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+.dark .close-button {
+    color: #999;
+}
+
+.dark .close-button:hover {
+    color: #fff;
+}
+
+/* 添加点击效果 */
+.close-button:active {
+    transform: scale(0.95);
+}
+
+/* 移除按钮的默认外观 */
+.close-button:focus {
+    outline: none;
+}
+
+/* 可选: 添加键盘焦点样式 */
+.close-button:focus-visible {
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+    border-radius: 4px;
+}
+
+.slot-list {
+    overflow-y: auto;
+    max-height: calc(80vh - 100px);
+    padding-right: 10px;
+}
+
+.save-slot {
+    display: flex;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.save-slot:hover {
+    background-color: #f5f5f5;
+    transform: translateX(5px);
+}
+
+.save-slot .number {
+    width: 60px;
+    font-weight: bold;
+    color: #666;
+}
+
+.save-slot .content {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.save-slot .time {
+    width: 150px;
+    text-align: right;
+    color: #888;
+    font-size: 12px;
+}
+
+.empty-slot {
+    color: #999;
+    background-color: #fafafa;
+}
+
+.empty-slot:hover {
+    background-color: #f0f0f0;
+}
+
+/* 自定义滚动条样式 */
+.save-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.save-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.save-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.save-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.new-save {
+    border: 2px dashed #ccc;
+    background-color: #f9f9f9;
+}
+
+.new-save:hover {
+    border-color: #999;
+    background-color: #f0f0f0;
+}
+
+.empty-notice {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+.dark .new-save {
+    border-color: #444;
+    background-color: #222;
+}
+
+.dark .new-save:hover {
+    border-color: #666;
+    background-color: #333;
+}
+
+.dark .empty-notice {
+    color: #999;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 0.2s ease-out forwards;
+}
+
+.slot-content {
+    display: flex;
+    flex-grow: 1;
+    cursor: pointer;
+    align-items: center;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 8px;
+    color: #999;
+    transition: color 0.2s ease;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    color: #ff4444;
+}
+
+.dark .delete-button {
+    color: #666;
+}
+
+.dark .delete-button:hover {
+    color: #ff6666;
+}
+
+/* 新存档按钮不需要删除按钮 */
+.new-save .delete-button {
+    display: none;
+}
+
+/* 背景图 */
+.bg {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 定义keyframe动画，命名为blink */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 添加兼容性前缀 */
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 定义blink类*/
+.blink {
+    /* color: red; */
+    /* font-size: 46px; */
+    -o-animation: blink 1s linear infinite;
+    -webkit-animation: blink 1s linear infinite;
+    -moz-animation: blink 1s linear infinite;
+    -ms-animation: blink 1s linear infinite;
+    animation: blink 1s linear infinite;
+}
+
+/* 输入框容器样式 */
+#input-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* 输入框样式 */
+#input-box {
+    flex: 1;
+    padding: 10px;
+    font-size: 13pt;
+    border: 2px solid #b97c2c;
+    border-radius: 4px;
+    background: white;
+    color: #888;
+    font-family: inherit;
+}
+
+/* 确定按钮样式 */
+#input-submit {
+    padding: 10px 20px;
+    font-size: 13pt;
+    background: #b97c2c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#input-submit:hover {
+    background: #a16923;
+}
+
+/* 深色主题样式 */
+.dark #input-box {
+    background: #222;
+    border-color: #cc8f1a;
+    color: #fff;
+}
+
+.dark #input-submit {
+    background: #cc8f1a;
+}
+
+.dark #input-submit:hover {
+    background: #b37d15;
+}
+
+#input-box:focus {
+    outline: none;
+    border-color: #4a3011;
+    box-shadow: 0 0 5px rgba(185, 124, 44, 0.5);
+}
+
+.dark #input-box:focus {
+    border-color: #e6a01c;
+    box-shadow: 0 0 5px rgba(204, 143, 26, 0.5);
 }
