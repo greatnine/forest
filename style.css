@@ -184,14 +184,14 @@ body {
     margin-bottom: 1rem;
     color: #f90909;
     text-shadow: 
-      0 1px 0 #dbf704,
+      0 1px 0 #e6baf8,
       0 2px 0 #546f02,
       0 3px 0 #aaa,
       0 4px 0 #999,
       0 5px 0 #888,
       0 6px 5px rgba(0,0,0,0.6),
       0 0 10px rgba(241,221,9,0.5);
-    background: linear-gradient(to bottom, #f1dd09 0%, #d4c307 100%);
+    background: linear-gradient(to bottom, #faf9fa 0%, #e19aed 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
