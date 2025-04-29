@@ -1,8 +1,10 @@
 ﻿<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
 
+    <!-- 这里替换标题 -->
     <title>提审贪官</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,51 +14,58 @@
 </head>
 
 <body>
-    <div id="save-overlay" class="modal-overlay hidden">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h2>存档列表</h2>
-                <button class="close-button">×</button>
-            </div>
-            <div class="slot-list" id="save-slot-list">
-                <!-- 存档列表将由 JavaScript 动态生成 -->
-            </div>
-        </div>
-    </div>
-
-    <div id="load-overlay" class="modal-overlay hidden">
-        <div class="modal-container">
-            <div class="modal-header">
-                <h2>读档列表</h2>
-                <button class="close-button">×</button>
-            </div>
-            <div class="slot-list" id="load-slot-list">
-                <!-- 读档列表将由 JavaScript 动态生成 -->
-            </div>
-        </div>
-    </div>
-    
     <img alt="" id="bg_img" class="bg" />
     <div class="outerContainer">
-        <h3 class="written-in-ink"><a href="../../index.html">大师的内心游戏</a></h3>
+        <div id="load-dialog" class="modal-overlay">
+            <div class="modal-data">
+                <p class="modal-title">读取进度</p>
+                <div id="load-dialog-point-1" class="modal-sl-point">
+                    <p class="modal-sl-point-content">存档 1</p>
+                </div>
+                <div id="load-dialog-point-2" class="modal-sl-point">
+                    <p id="load-dialog-point-2-content">存档 2</p>
+                </div>
+                <div id="load-dialog-point-3" class="modal-sl-point">
+                    <p id="load-dialog-point-3-content">存档 3</p>
+                </div>
+                <a id="close-load-dialog" title="关闭">关闭</a>
+            </div>
+        </div>
+        <div id="save-dialog" class="modal-overlay">
+            <div class="modal-data">
+                <p class="modal-title">保存进度</p>
+                <div id="save-dialog-point-1" class="modal-sl-point">
+                    <p id="save-dialog-point-1-content">存档 1</p>
+                </div>
+                <div id="save-dialog-point-2" class="modal-sl-point">
+                    <p id="save-dialog-point-2-content">存档 2</p>
+                </div>
+                <div id="save-dialog-point-3" class="modal-sl-point">
+                    <p id="save-dialog-point-3-content">存档 3</p>
+                </div>
+                <a id="close-save-dialog" title="关闭">关闭</a>
+            </div>
+        </div>
 
+        <h3 class="written-in-ink"><a href="../../index.html">大师的内心游戏</a></h3>
         <div id="controls" class="buttons">
-          <a id="rewind" title="重新开始">重新开始</a>
-          <a id="save" title="保存进度">保存进度</a>
-          <a id="reload" title="读取进度">读取进度</a>
-          <a id="theme-switch" title="切换主题">切换主题</a>
+            <a id="rewind" title="重头开始">重新开始</a>
+            <a id="save" title="保存当前进度">保存进度</a>
+            <a id="reload" title="读取已保存的进度">读取进度</a>
+            <a id="theme-switch" title="切换主题">切换主题</a>
         </div>
 
         <div id="story" class="container">
             <div class="header">
+                <!-- 这里替换标题 -->
                 <h1>提审贪官</h1>
                 <h2 class="byline"></h2>
             </div>
         </div>
     </div>
-
     <script src="ink.js"></script>
     <script src="提审贪官.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

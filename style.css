@@ -157,7 +157,6 @@ footer {
 
 
 /* 字体定义 */
-/*
 @font-face {
     font-family: 'SimFang';
     src: url('fonts/simfang.ttf') format('truetype');
@@ -167,7 +166,6 @@ footer {
     font-family: 'SimLi';
     src: url('fonts/SIMLI.TTF') format('truetype');
 }
-*/
 
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -181,18 +179,18 @@ body {
 
 .main-title {    
     font-family: 'SimLi', sans-serif;
-    font-size: 3.0rem;
+    font-size: 2.0rem;
     margin-bottom: 1rem;
 }
 
 .section-title {
-    /* font-family: 'SimFang', sans-serif; */
-    font-size: 1.8rem;
-    margin: 2rem 0;
+    font-family: 'SimFang', sans-serif;
+    font-size: 1.0rem;
+    margin: 1rem 0;
 }
 
 .article-card h3 {
-    /* font-family: 'SimFang', sans-serif; */
+    font-family: 'SimFang', sans-serif;
     transition: color 0.3s ease;
 }
 
@@ -221,7 +219,7 @@ body {
     left: 0;
     width:100vw;
     height:100vh;
-    /* background-image: url('images/photo-light.jpg'); */
+    background-image: url('images/photo-light.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
