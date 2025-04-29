@@ -50,8 +50,11 @@ header {
     padding: 2rem 0;
     margin-bottom: 3rem;
     animation: fadeInDown 1s ease-out;
-    background-image: url('images/header.jpg');
-}
+    background-image: url('images/head.jpg');
+    background-size: cover; /* 等比缩放，完全覆盖容器 */
+    background-repeat:round; /* repeat;默认值，双向平铺 */
+} 
+
 
 header h1 {
     font-size: 3.0rem;
@@ -63,11 +66,7 @@ header h1 {
     animation: fadeInUp 1s ease-out forwards;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    color: #666;
-    animation: fadeIn 1s ease-out 0.5s forwards;
-}
+
 
 /* 文章网格 */
 .article-grid {
@@ -157,6 +156,7 @@ footer {
 
 
 /* 字体定义 */
+/*
 @font-face {
     font-family: 'SimFang';
     src: url('fonts/simfang.ttf') format('truetype');
@@ -166,7 +166,7 @@ footer {
     font-family: 'SimLi';
     src: url('fonts/SIMLI.TTF') format('truetype');
 }
-
+*/
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
     line-height: 1.6;
@@ -177,16 +177,38 @@ body {
     z-index: 1;
 }
 
-.main-title {    
+/*金属光泽 立体浮雕*/
+.main-title {
     font-family: 'SimLi', sans-serif;
     font-size: 2.0rem;
     margin-bottom: 1rem;
+    color: #f90909;
+    text-shadow: 
+      0 1px 0 #dbf704,
+      0 2px 0 #546f02,
+      0 3px 0 #aaa,
+      0 4px 0 #999,
+      0 5px 0 #888,
+      0 6px 5px rgba(0,0,0,0.6),
+      0 0 10px rgba(241,221,9,0.5);
+    background: linear-gradient(to bottom, #f1dd09 0%, #d4c307 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: #f8f4f4;
+    animation: fadeIn 1s ease-out 0.5s forwards;
 }
+
+
 
 .section-title {
     font-family: 'SimFang', sans-serif;
     font-size: 1.0rem;
     margin: 1rem 0;
+    color: #104903;
 }
 
 .article-card h3 {
@@ -226,4 +248,3 @@ body {
     filter: none;
     z-index: -1;
 }
-
