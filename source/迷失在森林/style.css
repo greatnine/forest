@@ -47,7 +47,7 @@ h2 {
 
 .written-in-ink {
     z-index: 3;
-    font-size: 9pt;
+    font-size: 13pt;    			/*--------------9t ->13t -----------------*/
     font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
     text-align: center;
     font-weight: 700;
@@ -105,7 +105,7 @@ h2 {
 }
 
 p {
-    font-size: 15pt;
+    font-size: 15pt;     		/*-----------------  13t- 15t  -------------------*/
     color: #888;
     line-height: 1.7em;
     font-weight: normal;
@@ -185,7 +185,7 @@ img {
 
 #controls {
     z-index: 4;
-    font-size: 9pt;
+    font-size: 13pt;      /*-----------------9t->13t----------------------------------*/
     text-align: center;
     padding-bottom: 6px;
     position: fixed;
