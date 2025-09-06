@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+:root{
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+ /* 显示谷歌字体--楷体。Usage:    
+    font-family: var(--fonte2);   
+    或
+    font-family: var(--fonte3);
+ */
 
 body {
     font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
@@ -20,6 +31,7 @@ h2 {
 }
 
 h1 {
+    font-family: var(--fonte3);
     font-size: 30pt;
     margin-bottom: 10px;
 }

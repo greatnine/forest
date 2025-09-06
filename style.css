@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
-
 :root{
     --font1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Passion One', cursive;
     --fonte3: 'Sriracha', cursive;
-} 
+}
+ /* 显示谷歌字体--楷体。Usage:    
+    font-family: var(--fonte2);   
+    或
+    font-family: var(--fonte3);
+ */
+    
 
 
 /* 全局样式 */
@@ -13,7 +18,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*
+
+/* 后边定义
 body {
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
     line-height: 1.6;
@@ -24,6 +30,10 @@ body {
     z-index: 1;
     overflow-x: hidden;
 }*/
+
+
+
+
 
 /* 背景图样式 */
 .background-container {
@@ -39,6 +49,8 @@ body {
     filter:none;  /*blur(3px);*/
     z-index: -1;
 }
+
+
 
 /* 内容容器 */
 .content-container {
@@ -177,9 +189,12 @@ footer {
 }
 */
 
-body {
-    				/*font-family: 'Segoe UI', system-ui, sans-serif;*/
-    font-family: var(--fonte2); 		/*  显示谷歌字体--楷体  */
+
+
+body {   
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    /*font-family: var(--fonte2); 	*/	/* 显示谷歌字体--楷体  */
+    /*font-family: var(--font1); 	*/	/* 显示谷歌字体*/
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
@@ -188,10 +203,20 @@ body {
     z-index: 1;
 }
 
-				/*金属光泽 立体浮雕*/
-.main-title {
-    font-family: 'SimLi', sans-serif;
-    font-size: 2.0rem;
+
+h2 { 			
+    /* 大师的内心游戏*//* 显示谷歌字体--楷体  */
+    font-family: var(--fonte2); 	
+    font-size: 2.0rem;		
+}
+
+	
+			
+.main-title {    
+    /*Master's Inner Game —IF*//*金属光泽 立体浮雕*/ 
+    /*font-family: 'SimLi', sans-serif;*/
+    font-family: var(--fonte2); 		/* 显示谷歌字体--楷体  */
+    font-size: 2.0rem;			
     margin-bottom: 1rem;
     color: #f90909;
     text-shadow: 
@@ -208,6 +233,7 @@ body {
   }
 
   .subtitle {
+    font-family: var(--fonte2); 		/* 显示谷歌字体--楷体  */
     font-size: 1.5rem;
     color: #f8f4f4;
     animation: fadeIn 1s ease-out 0.5s forwards;
@@ -216,14 +242,16 @@ body {
 
 
 .section-title {
-    font-family: 'SimFang', sans-serif;
-    font-size: 1.0rem;
+    /*font-family: 'SimFang', sans-serif;  */
+    font-family: var(--fonte2); 		/* 显示谷歌字体--楷体  */
+    font-size: 1.5rem;    		/* 1.0rem*/
     margin: 1rem 0;
     color: #373839;
 }
 
 .article-card h3 {
-    font-family: 'SimFang', sans-serif;
+    /*font-family: 'SimFang', sans-serif;*/
+    font-family: var(--fonte2); 		/* 显示谷歌字体--楷体  */
     transition: color 0.3s ease;
 }
 
