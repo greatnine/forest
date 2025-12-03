@@ -76,11 +76,11 @@
     </footer>
     <script>        
         const poems = [     // 诗句库
-            "春江潮水连海平，海上明月共潮生。",
-            "春风得意千秋月，奇遇笠翁道璇玑。",
-            "落霞与孤鹜齐飞，秋水共长天一色。",
-            "山重水复疑无路，柳暗花明又一村。",
-            "长风破浪会有时，直挂云帆济沧海。"
+            "春江潮水连海平，海上明月共潮生",
+            "春风得意千秋月，奇遇笠翁道璇玑",
+            "落霞与孤鹜齐飞，秋水共长天一色",
+            "山重水复疑无路，柳暗花明又一村",
+            "长风破浪会有时，直挂云帆济沧海"
         ];        
         const poemDisplay = document.getElementById('poemDisplay');
         let currentIndex = -1;
@@ -101,7 +101,7 @@
                 poemDisplay.style.opacity = 1;                
                 // 更新计数器
                counter++;
-            }, 500);
+            }, 1000);
         }        
         // 初始加载
         showRandomPoem();        
