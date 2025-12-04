@@ -1,6 +1,6 @@
 // story.json
 const articlesData = 
-//---------------------------------------------------------------------故事信息
+// ---------------------------------故事信息
 [
     {
         "date": "2024年2月3日",
@@ -20,21 +20,25 @@ const articlesData =
         "summary": "中国古代经典骗经书里的故事。这个故事讲述了一个关于假马和脱缎的故事，揭示了人性中的贪婪和愚蠢。主角通过一系列的巧妙手段，成功地骗取了他人的信任和财富。",
         "link": "source/假马脱缎/index.html"
     },
-/*
+
+
+/*--------------------------------
     {
         "date": "2025年1月10日",
         "title": "反贪腐互动小说——提审贪官",
         "summary": "这个互动故事发生在二十一世纪初法制不健全的社会。主角是一名年轻的反贪腐调查员。故事围绕着一名贪官的调查展开，玩家需要通过选择不同的对话和行动来推动故事的发展。在调查过程中，主角需做出选择来揭露真相。",
         "link": "source/提审贪官/index.html"
     },
-*/
+-----------------------------------*/
+
     {
         "date": "2024年11月10日",
         "title": "谍报惊险互动小说——截获（英文）<br>The Intercept",
         "summary": "这个故事发生在二战时期英国布莱切利公园。主角是一位参与破解德军密码机Bombe的天才数学家。故事以主角被怀疑为叛徒、被隔离审讯为开端，围绕失踪密码机关键部件展开……<br>This story took place in Bletchley Park, England during World War II. The protagonist is a genius mathematician who participates in cracking the German cipher machine Bombe. The story begins with the protagonist being suspected of being a traitor and being quarantined for interrogation, and revolves around the key components of the missing password machine. ...",
         "link": "source/TheIntercept/index.html"
     },
-]/* -------------------------------------------------------------------故事信息
+]
+// ---------------------------------故事信息
 
 
 
@@ -47,7 +51,11 @@ const articlesData =
 
 
 
-*/// 文章数据示例
+
+
+/*--------------
+   文章数据示例
+---------------*/
 document.addEventListener('DOMContentLoaded', () => {  
     const articlesContainer = document.getElementById('articles-container');
     // 动态生成文章卡片
