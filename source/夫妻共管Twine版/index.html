@@ -154,20 +154,7 @@ body {
 
 
 
-/* 响应式设计：在较小屏幕上调整边距和字体大小 */
-@media (max-width: 768px) {
-    #passages {
-        padding: 1.5rem;
-        margin: 1rem auto;
-        max-width: 95%; /* 在手机上使用更宽的比例 */
-    }
-    body {
-        font-size: 1.1rem; /* 在手机上稍微调小字号 */
-        padding: 1rem;
-    }
-    .passage h1 { font-size: 1.8rem; }
-    .passage h2 { font-size: 1.5rem; }
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;set $protagonist = &quot;某位勇士&quot;&gt;&gt;
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="StoryInit" tags="" position="100,100" size="100,100">&lt;&lt;set $protagonist = &quot;某位勇士&quot;&gt;&gt;
 &lt;&lt;set $hasReadNotice to false&gt;&gt;
 /* 初始化，$protagonist的默认值将在开局选择时被覆盖 */
 
@@ -197,6 +184,7 @@ UIBar.stow();
 ].random()&gt;&gt;
 
 &gt;&gt;[[哟，这不是老王和他媳妇嘛！|SetProtagonistWang]]
+
 &gt;&gt;[[嘿，老张和他家领导也来了！|SetProtagonistZhang]]</tw-passagedata><tw-passagedata pid="4" name="SetProtagonistWang" tags="" position="300,300" size="100,100">&lt;&lt;set $protagonist to either(&quot;老王&quot;, &quot;老王头&quot;, &quot;隔壁老王叔&quot;)&gt;&gt;
 &lt;&lt;set $wife to either(&quot;王嫂&quot;, &quot;他家领导&quot;, &quot;财政大臣&quot;)&gt;&gt;
 &lt;&lt;set $dogName to either(&quot;旺财&quot;, &quot;来福&quot;, &quot;嗅嗅&quot;)&gt;&gt;
@@ -218,9 +206,11 @@ UIBar.stow();
 
 我认识的$protagonist和他家$wife也来取钱。空气突然安静，只见$wife一个眼神杀过去，对$protagonist发出指令：“我要输密码了，你，站开些！” 这气场，这语气，妥妥的家庭C位担当。
 
-&gt;&gt;[[为啥？这又是什么新型家庭礼仪？|begin]]
+&gt;&gt;[[为啥站开些？|begin]]
+
 &gt;&gt;[[我赌五毛，他不敢不听。|begin]]
-&gt;&gt;[[懂了，这是真·家庭版“双因素认证”。|begin]]</tw-passagedata><tw-passagedata pid="7" name="begin" tags="" position="700,100" size="100,100">$protagonist真就乖乖退到一米开外，那叫一个训练有素。我内心OS：这家庭地位，一目了然啊！ 果然，经济基础决定家庭地位，诚不我欺。
+
+&gt;&gt;[[懂了，这是“双因素认证”。|begin]]</tw-passagedata><tw-passagedata pid="7" name="begin" tags="" position="700,100" size="100,100">$protagonist真就乖乖退到一米开外，那叫一个训练有素。我内心OS：这家庭地位，一目了然啊！ 果然，经济基础决定家庭地位，诚不我欺。
 
 只听到“滴滴滴”三声清脆的按键音，$wife潇洒转身，对$protagonist扬了扬下巴：“好了，我输完了，该你输后面三位了！”
 
@@ -230,8 +220,9 @@ UIBar.stow();
 
 顿时，我整个人都傻了！仿佛看到了现实版的“道高一尺，魔高一丈”。绝了！这是把三十六计玩明白了啊！我内心疯狂为$protagonist打call：大哥，你这手“暗度陈仓”玩得6啊，小弟佩服得五体投地！
 
-[[你觉得他老婆发现了这个“神操作”？|Scene3]]
-[[你觉得他老婆没发现？|Scene5]]</tw-passagedata><tw-passagedata pid="8" name="Scene3" tags="" position="700,300" size="100,100">&gt;&gt;&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+[[他老婆发现了这个“神操作”|Scene3]]
+
+[[他老婆没发现|Scene5]]</tw-passagedata><tw-passagedata pid="8" name="Scene3" tags="" position="700,300" size="100,100">&gt;&gt;&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
 $protagonist把取出来的“胜利果实”交给他家$wife。只见$wife接过钱，没有放进钱包，而是以一套丝滑小连招，将钞票“啪”地一下拍在了$protagonist脸上：“搞啥明堂啊？你敢背着老娘耍花招！”
 
 她柳眉倒竖，声音陡然拔高：“按键音响了9下！别人家密码是6位，你家是尊贵的9位VIP吗？银行是你家开的啊？老娘早就觉得你不对劲了！”
@@ -239,6 +230,7 @@ $protagonist把取出来的“胜利果实”交给他家$wife。只见$wife接�
 目睹此景，我手里的瓜……啊不，我手里的银行卡差点惊掉。这敏锐度，这洞察力，不去当侦探都可惜了！
 
 [[老婆持续输出，进入狂暴状态。|Scene4]]
+
 [[老婆气得转身就走。|Scene5]]</tw-passagedata><tw-passagedata pid="9" name="Scene4" tags="" position="900,100" size="100,100">&gt;&gt;&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
 
 $protagonist当场石化，一脸“我是谁我在哪”的茫然。
@@ -250,6 +242,7 @@ $protagonist吓得一哆嗦，战战兢兢地从牙缝里挤出六个数字：�
 至此，我彻底惊呆了。这哪是取钱现场，这是《无间道》+《窃听风云》的家庭浓缩版啊！我钱也没敢取，像不小心撞破了什么惊天秘密一样，脚底抹油，溜了溜了。
 
 [[欲知后事如何，且听下回分解。|Scene5]]
+
 [[算了，这瓜太刺激，吃不动了。|Poem]]</tw-passagedata><tw-passagedata pid="10" name="Scene5" tags="" position="900,500" size="100,100">&gt;&gt;&lt;img src=&quot;Assets/Images/狗.png&quot; alt=&quot;遛狗&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
 
 过了几天，在小区遛弯偶遇$protagonist，听他愁眉苦脸地吐槽：他家$wife从银行回去后，反手就买了只狗，取名$dogName。
@@ -260,7 +253,8 @@ $wife神秘一笑，那笑容里仿佛藏着整个华尔街的套路：“以后
 这对话，听得我后背一凉，有种不祥的预感。
 
 [[强烈想知道狗子的终极使命！|Scene6]]
-[[别说了，我已经开始心疼他的私房钱了。|后来]]</tw-passagedata><tw-passagedata pid="11" name="Scene6" tags="" position="600,500" size="100,100">&gt;&gt;&lt;img src=&quot;Assets/Images/喝酒.png&quot; alt=&quot;喝酒&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+
+[[不想知道。开始心疼他的私房钱了。|后来]]</tw-passagedata><tw-passagedata pid="11" name="Scene6" tags="" position="600,500" size="100,100">&gt;&gt;&lt;img src=&quot;Assets/Images/喝酒.png&quot; alt=&quot;喝酒&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
 又过了几天，见到$protagonist时，他整个人都emo了。
 他拉着我，悲伤逆流成河：“兄弟，我藏在鞋盒里、床底下、旧书里的‘战略储备资金’……全都不见了！一滴都不剩了啊！”
 他红着眼圈补充：“$dogName那鼻子，比缉毒犬还灵！我老婆现在管它叫‘移动反私房钱雷达’。”
