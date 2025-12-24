@@ -166,7 +166,11 @@ UIBar.stow();
 [[好的，开始故事|Start][$hasReadNotice to true]]
 [[About|About]] 
 
-/*[[代码测试|test]]*/</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="100,200" size="100,100">
+/*
+[[代码测试|test]]
+*/</tw-passagedata><tw-passagedata pid="3" name="Start" tags="" position="100,200" size="100,100">&lt;&lt;script&gt;&gt; //隐藏 UI 栏（内置菜单所在位置）
+UIBar.stow();
+&lt;&lt;/script&gt;&gt;
 今天是&lt;&lt;= either (
 &quot;一个平凡的日子&quot;, 
 &quot;星期天&quot;, 
@@ -205,7 +209,7 @@ UIBar.stow();
 	&lt;&lt;set $passwordWife2 to &quot;748&quot;&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;goto &quot;Scene1&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Scene1" tags="" position="500,100" size="100,100">
-&lt;img src=&quot;Assets/Images/按键.png&quot; alt=&quot;按键&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+
 
 我认识的$protagonist和他家$wife也来取钱。空气突然安静，只见$wife一个眼神杀过去，对$protagonist发出指令：“我要输密码了，你，站开些！” 这气场，这语气，妥妥的家庭C位担当。
 
@@ -213,7 +217,9 @@ UIBar.stow();
 
 &gt;&gt;[[我赌五毛，他不敢不听。|begin]]
 
-&gt;&gt;[[懂了，这是“双因素认证”。|begin]]</tw-passagedata><tw-passagedata pid="7" name="begin" tags="" position="700,100" size="100,100">$protagonist真就乖乖退到一米开外，那叫一个训练有素。我内心OS：这家庭地位，一目了然啊！ 果然，经济基础决定家庭地位，诚不我欺。
+&gt;&gt;[[懂了，这是“双因素认证”。|begin]]
+
+&lt;img src=&quot;Assets/Images/按键.png&quot; alt=&quot;按键&quot; style=&quot;width: 200px; height: auto;&quot;&gt;</tw-passagedata><tw-passagedata pid="7" name="begin" tags="" position="700,100" size="100,100">$protagonist真就乖乖退到一米开外，那叫一个训练有素。我内心OS：这家庭地位，一目了然啊！ 果然，经济基础决定家庭地位，诚不我欺。
 
 只听到“滴滴滴”三声清脆的按键音，$wife潇洒转身，对$protagonist扬了扬下巴：“好了，我输完了，该你输后面三位了！”
 
@@ -225,7 +231,7 @@ UIBar.stow();
 
 [[他老婆发现了这个“神操作”|Scene3]]
 
-[[他老婆没发现|Scene5]]</tw-passagedata><tw-passagedata pid="8" name="Scene3" tags="" position="700,300" size="100,100">&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+[[他老婆没发现|Scene5]]</tw-passagedata><tw-passagedata pid="8" name="Scene3" tags="" position="700,300" size="100,100">
 $protagonist把取出来的“胜利果实”交给他家$wife。只见$wife接过钱，没有放进钱包，而是以一套丝滑小连招，将钞票“啪”地一下拍在了$protagonist脸上：“搞啥明堂啊？你敢背着老娘耍花招！”
 
 她柳眉倒竖，声音陡然拔高：“按键音响了9下！别人家密码是6位，你家是尊贵的9位VIP吗？银行是你家开的啊？老娘早就觉得你不对劲了！”
@@ -234,9 +240,9 @@ $protagonist把取出来的“胜利果实”交给他家$wife。只见$wife接�
 
 [[老婆持续输出，进入狂暴状态。|Scene4]]
 
-[[老婆气得转身就走。|Scene5]]</tw-passagedata><tw-passagedata pid="9" name="Scene4" tags="" position="900,100" size="100,100">&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+[[老婆气得转身就走。|Scene5]]
 
-$protagonist当场石化，一脸“我是谁我在哪”的茫然。
+&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;</tw-passagedata><tw-passagedata pid="9" name="Scene4" tags="" position="900,100" size="100,100">$protagonist当场石化，一脸“我是谁我在哪”的茫然。
 
 $wife火力全开，继续输出：“可以啊你！上次我按的是‘520’（我爱您），这次我按的是‘748’（去死吧），你都能把钱取出来？你这密码是万能钥匙啊？说！密码到底是啥！今天不说清楚，我让你知道什么叫‘人间真实’！”
 
@@ -246,9 +252,9 @@ $protagonist吓得一哆嗦，战战兢兢地从牙缝里挤出六个数字：�
 
 [[欲知后事如何，且听下回分解。|Scene5]]
 
-[[算了，这瓜太刺激，吃不动了。|Poem]]</tw-passagedata><tw-passagedata pid="10" name="Scene5" tags="" position="900,500" size="100,100">&lt;img src=&quot;Assets/Images/狗.png&quot; alt=&quot;遛狗&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+[[算了，这瓜太刺激，吃不动了。|Poem]]
 
-过了几天，在小区遛弯偶遇$protagonist，听他愁眉苦脸地吐槽：他家$wife从银行回去后，反手就买了只狗，取名$dogName。
+&lt;img src=&quot;Assets/Images/数钱.png&quot; alt=&quot;数钱&quot; style=&quot;width: 200px; height: auto;&quot;&gt;</tw-passagedata><tw-passagedata pid="10" name="Scene5" tags="" position="900,500" size="100,100">过了几天，在小区遛弯偶遇$protagonist，听他愁眉苦脸地吐槽：他家$wife从银行回去后，反手就买了只狗，取名$dogName。
 从此，$wife在家闲着没事，就拿着人民币让$dogName闻啊闻。
 $protagonist百思不得其妻解，好奇地问：“老婆，你这是开发狗子的新技能，准备让它去大马路上搞‘风投’（风中投资，捡钱）吗？”
 $wife神秘一笑，那笑容里仿佛藏着整个华尔街的套路：“以后你就知道了！”
@@ -257,21 +263,26 @@ $wife神秘一笑，那笑容里仿佛藏着整个华尔街的套路：“以后
 
 [[强烈想知道狗子的终极使命！|Scene6]]
 
-[[不想知道。开始心疼他的私房钱了。|后来]]</tw-passagedata><tw-passagedata pid="11" name="Scene6" tags="" position="600,500" size="100,100">&lt;img src=&quot;Assets/Images/喝酒.png&quot; alt=&quot;喝酒&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
-又过了几天，见到$protagonist时，他整个人都emo了。
+[[不想知道。开始心疼他的私房钱了。|后来]]
+
+&lt;img src=&quot;Assets/Images/狗.png&quot; alt=&quot;遛狗&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Scene6" tags="" position="600,500" size="100,100">又过了几天，见到$protagonist时，他整个人都emo了。
 他拉着我，悲伤逆流成河：“兄弟，我藏在鞋盒里、床底下、旧书里的‘战略储备资金’……全都不见了！一滴都不剩了啊！”
 他红着眼圈补充：“$dogName那鼻子，比缉毒犬还灵！我老婆现在管它叫‘移动反私房钱雷达’。”
 
 后来有一次，和$protagonist借酒浇愁。三杯下肚，他提起这夫妻共管之事，顿时泪洒当场：“不说了，说多了都是泪……兄弟们，听我一句劝，千万别跟老婆斗，她们的套路，比马里亚纳海沟还深！”
 
-The End
+(The End)
 
-[[意犹未尽？再来一遍！|Poem]]</tw-passagedata><tw-passagedata pid="12" name="后来" tags="" position="850,650" size="100,100">&lt;img src=&quot;Assets/Images/喝酒.png&quot; alt=&quot;喝酒&quot; style=&quot;width: 200px; height: auto;&quot;&gt;
-后来，在一次酒局上，$protagonist提起往事，依然心有余悸。
+[[意犹未尽？再来一遍！|Poem]]
+
+&lt;img src=&quot;Assets/Images/喝酒.png&quot; alt=&quot;喝酒&quot; style=&quot;width: 200px; height: auto;&quot;&gt;</tw-passagedata><tw-passagedata pid="12" name="后来" tags="" position="850,650" size="100,100">后来，在一次酒局上，$protagonist提起往事，依然心有余悸。
 他抹了把并不存在的眼泪，以一副“过来人”的姿态告诫我们：“血的教训啊！朋友们，千万不要试图和老婆斗智斗勇。你以为你在第五层，其实她早就在大气层了！家庭和谐，从坦白从宽开始……”
 
 
-[[回到故事开头，看看别的选择？|Poem]]</tw-passagedata><tw-passagedata pid="13" name="Poem" tags="" position="300,500" size="100,100">
+[[回到故事开头，看看别的选择？|Poem]]
+
+&lt;img src=&quot;Assets/Images/喝酒.png&quot; alt=&quot;喝酒&quot; style=&quot;width: 200px; height: auto;&quot;&gt;</tw-passagedata><tw-passagedata pid="13" name="Poem" tags="" position="300,500" size="100,100">
 正是：
 
 夫妻共管设重关，
