@@ -2,10 +2,6 @@
 const articlesData = 
 // ---------------------------------故事信息
 [
-   
-    
-   
-
     {
         "date": "2024年4月28日",
         "title": "互动故事——夫妻共管",
@@ -13,12 +9,24 @@ const articlesData =
         "link": "source/夫妻共管/index.html"
     },
 
-    {
-        "date": "2025年12月24日",
-        "title": "互动故事——夫妻共管Twine版",
+   
+   {
+        "date": "2025年12月25日",
+        "title": "互动故事——夫妻共管Chapbook版",
         "summary": "这是一个Twine版本。",
-        "link": "source/夫妻共管Twine版/index.html"
+        "link": "source/夫妻共管twine/wise-chapbook.html"
     },  
+
+
+
+     {
+        "date": "2025年12月24日",
+        "title": "互动故事——夫妻共管Sugarcube版",
+        "summary": "这是一个Twine版本。",
+        "link": "source/夫妻共管twine/wife-Sugarcube.html"
+    },  
+
+
 
 /*
 --------------------------------
