@@ -1,8 +1,22 @@
 (function(storyContent) {
 
+    // ✅ 清掉所有旧存档，防止指针错乱 故事正文空白
+    localStorage.clear();
+    // 只删 ink 的存档
+    /*Object.keys(localStorage).forEach(function (k) {
+        if (k.startsWith("ink_")) {
+            localStorage.removeItem(k);
+        }
+    });*/
+
     // Create ink story from the content using inkjs
     var story = new inkjs.Story(storyContent);
 
+    // ✅ 捕获 ink 警告，不让它变成致命错误
+    story.onError = function (msg, type) {
+        console.warn("Ink runtime warning:", msg);
+    };
+    
     var savePoint = "";
 
     let savedTheme;
@@ -451,6 +465,11 @@
     }
 
 })(storyContent);
+
+
+
+
+
 
 
 /* ------------------------------------------------------
