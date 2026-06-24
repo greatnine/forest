@@ -1,37 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700|Quattrocento:700');
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
-:root{
-    --font1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: 'Passion One', cursive;
-    --fonte3: 'Sriracha', cursive;
-}
- /* 显示谷歌字体--楷体。Usage:    
-    font-family: var(--fonte2);   
-    或
-    font-family: var(--fonte3);
- */
 
 body {
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
-    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
     background: white;
     overflow: hidden;
 }
 
-body.switched {
-    transition: color 0.6s, background-color 0.6s;
+@media screen and (prefers-reduced-motion: no-preference) {
+    body.switched {
+        transition: color 0.6s, background-color 0.6s;
+    }
 }
 
 h1,
 h2 {
     text-align: center;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    font-family: "Quattrocento", Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
 }
 
 h1 {
-    font-family: var(--fonte3);
     font-size: 30pt;
     margin-bottom: 10px;
 }
@@ -39,7 +29,7 @@ h1 {
 h2 {
     font-size: 14pt;
     font-style: italic;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    font-family: sans-serif;
     font-weight: lighter;
     color: #BBB;
 }
@@ -59,20 +49,25 @@ h2 {
 
 .written-in-ink {
     z-index: 3;
-    font-size: 13pt;    			/*--------------9t ->13t -----------------*/
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+    font-size: 9pt;
+    font-family: sans-serif;
     text-align: center;
     font-weight: 700;
     position: fixed;
     display: block;
     width: 100%;
     background: white;
-    transition: color 0.6s, background 0.6s;
     margin: 0;
     padding-top: 6px;
     padding-bottom: 6px;
     height: 14px;
     top: 0;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .written-in-ink {
+        transition: color 0.6s, background 0.6s;
+    }
 }
 
 /* 
@@ -86,7 +81,7 @@ h2 {
     -webkit-overflow-scrolling: touch;
     overflow: scroll;
     overflow-x: hidden;
-    height: 95%;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -109,31 +104,49 @@ h2 {
     margin: 0 auto;
     padding: 20px;
     padding-top: 4em;
-    /* background: white; */
+    background: white;
 }
 
-.switched .container {
-    transition: background-color 0.6s;
+@media screen and (prefers-reduced-motion: no-preference) {
+    .switched .container {
+        transition: background-color 0.6s;
+    }
 }
 
-p {
-    font-size: 15pt;     		/*-----------------  13t- 15t  -------------------*/
+/*p {
+    font-size: 13pt;
     color: #888;
     line-height: 1.7em;
-    font-weight: normal;
-}
+    font-weight: lighter;
+}*/
 
 a {
     font-weight: 700;
     color: #b97c2c;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
-    transition: color 0.6s;
+    font-family: sans-serif;
     text-decoration: none;
+}
+
+.unclickable {
+    font-weight: 700;
+    color: #4f3411;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: not-allowed;
 }
 
 a:hover {
     color: black;
-    transition: color 0.1s;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    a {
+        transition: color 0.6s;
+    }
+
+    a:hover {
+        transition: color 0.1s;
+    }
 }
 
 strong {
@@ -157,7 +170,12 @@ img {
 
 .container>* {
     opacity: 1.0;
-    transition: opacity 1.0s;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .container>* {
+        transition: opacity 1.0s;
+    }
 }
 
 /*
@@ -179,7 +197,7 @@ img {
 /*
   Class applied to choice links
 */
-.choice a {
+.choice a, .choice span {
     font-size: 15pt;
 }
 
@@ -197,16 +215,18 @@ img {
 
 #controls {
     z-index: 4;
-    font-size: 13pt;      /*-----------------9t->13t----------------------------------*/
+    font-size: 9pt;
     text-align: center;
     padding-bottom: 6px;
-    position: fixed;
-    right: 14px;
-    top: 4px;
-    -webkit-user-select: none;
     user-select: none;
-    /* background: white; */
-    transition: color 0.6s, background 0.6s;
+    display: flex;
+    gap: 12px;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    #controls {
+        transition: color 0.6s, background 0.6s;
+    }
 }
 
 #controls [disabled] {
@@ -220,10 +240,7 @@ img {
 @media screen and (max-width: 980px) {
     #controls {
         z-index: 2;
-        padding-top: 24px;
-        top: 0;
-        left: 0;
-        right: 0;
+        padding-top: 0;
     }
 }
 
@@ -242,7 +259,7 @@ body.dark {
 }
 
 .dark .container {
-    /* background: black; */
+    background: black;
 }
 
 .dark .written-in-ink {
@@ -251,11 +268,20 @@ body.dark {
 
 .dark a {
     color: #cc8f1a;
-    transition: color 0.6s;
+}
+.dark .unclickable{
+    color: #c4af87;
+    cursor:not-allowed;
 }
 
 .dark a:hover {
     color: white;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    .dark a {
+        transition: color 0.6s;
+    }
 }
 
 .dark strong {
@@ -271,185 +297,163 @@ body.dark {
 }
 
 .dark #controls {
-    /* background: black; */
+    background: black;
 }
 
-/* inky go */
-.modal-overlay {
-    visibility: hidden;
-    position: fixed;
-    /* 使用绝对定位或固定定位 */
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
+
+/* 选择后 正文插入<hr>*/
+.ink-choice-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(120,120,120,0.55), transparent);
+    margin: 1.6em 0;
+}
+body.dark .ink-choice-divider {
+    background: linear-gradient(to right, transparent, rgba(200,200,200,0.55), transparent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== TRAE 移动端适配核心 ========== */
+
+/* 1. iOS安全区+防止文字自动放大 */
+html, body {
+    margin: 0;
+    padding: 0;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+/* 2. 修复100vh动态高度问题 */
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    height: 100dvh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+}
+
+/* 3. 故事正文容器 */
+#story {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+    padding: 16px 20px !important;
+    padding-bottom: calc(80px + env(safe-area-inset-bottom)) !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* 4. 段落文字优化 */
+#story p {
+    font-size: 15pt !important;
+    line-height: 1.7em !important;
+    color: black !important;
+}
+
+/* 5. 选择支保持原版样式 */
+.choice {
     text-align: center;
-    z-index: 1000;
-    background-color: #000000aa;
-    /* background-color: #66ccff; */
-    /* opacity: 0 */
-    /* 背景半透明 */
+    line-height: 1.7em;
 }
 
-/* 模态框样式 */
-.modal-data {
+.choice a, .choice span {
+    font-size: 15pt;
+}
+
+/* 6. 图片自适应 */
+#story img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 7. 页眉横排容器（替代原written-in-ink） */
+/* written-in-ink样式已由header-bar替代，保留以防万一 */
+
+/* 8. 控制按钮区域 */
+#controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 9. 页眉和菜单横排居中 */
+.header-bar {
     position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0%;
-    bottom: 0%;
-    width: 400px;
-    height: 450px;
-    max-width: 80%;
-    max-height: 80%;
-    opacity: 1;
-    margin: auto;
-    background-color: #efefef;
-    border: 2px solid #000;
-    border-radius: 10px;
-    padding: 15px;
-    z-index: 10000;
-    text-align: center;
-}
-
-.modal-data p {
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
-    font-size: 13pt;
-    color: #666;
-    line-height: 100%;
-    font-weight: normal;
-}
-
-.modal-data .modal-title {
-    font-weight: bold;
-    color: #333;
-    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
-    font-size: 16pt;
-}
-
-.modal-sl-point {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 300px;
-    max-width: 100%;
-    height: 80px;
-    max-height: 100%;
-    background-color: #fff;
-    border-width: 1px;
-    border-radius: 10px;
-    border-color: #000;
-    border-style: solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #333;
+    gap: 12px;
+    padding: calc(6px + env(safe-area-inset-top)) 14px 6px 14px;
+    z-index: 100;
+    background: white;
+    flex-wrap: wrap;
+}
+
+.header-bar a {
+    font-size: 9pt;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #b97c2c;
+    text-decoration: none;
+}
+
+#controls a {
+    font-size: 11pt;  /*9pt*/
+    font-family: sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* 10. 暗色主题正文和页眉 */
+.dark #story p {
+    color: white !important;
+}
+
+.dark .header-bar {
+    background: black;
+}
+
+/* 11. 手机端媒体查询 */
+@media screen and (max-width: 600px) {
+    #story {
+        padding: 12px 14px !important;
+    }
     
-}
-.modal-sl-point p {
-    color: #333;
-}
-
-
-/* 定义keyframe动画，命名为blink */
-@keyframes blink {
-    0% {
-        opacity: 1;
+    h1 {
+        font-size: 22pt !important;
     }
-
-    50% {
-        opacity: 0;
+    
+    h2 {
+        font-size: 12pt !important;
     }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* 添加兼容性前缀 */
-@-webkit-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes blink {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* 定义blink类*/
-.blink {
-    /* color: red; */
-    /* font-size: 46px; */
-    animation: blink 1s linear infinite;
-    /* 其它浏览器兼容性前缀 */
-    -webkit-animation: blink 1s linear infinite;
-    -moz-animation: blink 1s linear infinite;
-    -ms-animation: blink 1s linear infinite;
-    -o-animation: blink 1s linear infinite;
-}
-
-/* 背景图 */
-.bg {
-    visibility: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-/* 自定义样式 */
-.role1 {
-    color: #ee0000   
 }
