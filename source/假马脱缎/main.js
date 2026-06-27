@@ -1,7 +1,7 @@
 (function(storyContent) {
 
     // ✅ 清掉所有旧存档，防止指针错乱 故事正文空白
-    localStorage.clear();
+   // localStorage.clear();
     // 只删 ink 的存档
     /*Object.keys(localStorage).forEach(function (k) {
         if (k.startsWith("ink_")) {
