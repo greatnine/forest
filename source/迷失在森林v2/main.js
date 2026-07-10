@@ -4,9 +4,9 @@
     //localStorage.clear();
     // 只删 ink 的存档
     /*Object.keys(localStorage).forEach(function (k) {
-        if (k.startsWith("ink_")) {
-            localStorage.removeItem(k);
-        }
+    //    if (k.startsWith("ink_")) {
+   //         localStorage.removeItem(k);
+   //     }
     });*/
 
     // Create ink story from the content using inkjs
