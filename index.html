@@ -1,98 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Storytelling @qijiuzhu</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images\favicon.png" />
+  <meta charset="UTF-8">
+  <!-- 关键：用绝对路径，从站点根开始 -->
+ <meta http-equiv="refresh" content="0; url=source/迷失在森林v2/index.html">
+<script>
+  window.location.replace("source/迷失在森林v2/index.html");
+</script>
+  <title>迷失在森林</title>
+  <style>
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+         display:flex;justify-content:center;align-items:center;height:100vh;margin:0;color:#666;background:#f5f5f5;}
+    a{color:#1677ff;text-decoration:none}
+  </style>
 </head>
 <body>
-    <header>
-
-<!--        
-    <div class="title">
-        <img src="logo.svg" alt="" class="logo" />
-        <div class="text">
-            <h2>大师的内心游戏 </h2>
-            <p class="byline">互动叙事——用程序代码写故事　by 传道者戚</p>
-        </div>
-    </div>        
-             <h2>大师的内心游戏 </h2>
-             <p class="byline">互动叙事——用程序代码写故事　by 传道者戚</p>
-             <h3 class="main-title">Master's Inner Game —IF</h2>
-            <p class="subtitle">互动叙事，操控剧情——智码与文学交融的奇幻之旅</p>
--->
-        <h2>大师的内心游戏 </h2>
-        <p class="byline">by 传道者戚</p>
-        <h3 class="main-title">Master's Inner Game —IF</h2>
-        <p class="subtitle">叙事文学与代码交融的奇幻之旅</p>
-    </header>
-
-
-
-    <!-- 背景图容器 -->
-    <div class="background-container"></div>
-    
-    <!-- 内容容器 -->
-    <div class="content-container">        
-        <main>
-            <section class="articles">
-                <h2 class="section-title" style="text-align: center;" id="poemDisplay"><b>春风得意千秋月，奇遇笠翁道璇玑</b></h2>
-                <p style="text-align: center;">阅读能拓展认知的广度和深度，在有限的时间里体验无限的人生境界</p>                
-                <p></p>    <br><hr>
-                <!--文章列表容器  -->
-                <div id="articles-container" class="article-grid"></div>
-            </section> 
-        </main>  
-        <section class="additional-info info">
-                <i>
-                    <p>人生如同一场跌宕起伏的剧情叙事，每一次选择都改写着命运的篇章。互动小说平台——大师的内心游戏，将文学与数智创意交织，带您踏入一个全新的文学境界，感受分支式非线性叙事的奇妙魅力。</p>
-                    <p>　在这里，您可以选择不同的故事路径，体验多样化的叙事方式。每个选择都将导向一个独特的故事情节和结局。欢迎体验我们的作品。与我们分享您的想法和意见！</p>
-                </i>
-                <br><hr><br>
-                <code>联系方式：传道者戚　　wechat13381025223　　<a href="mailto:　qijiuzhu@tsinghua.org.cn">qijiuzhu@tsinghua.org.cn </a></code> </p>
-        </section>        
-    </div>
-
-    <script src="story-list.js"></script>
-    <footer> 
-        <p>&copy; 2022-10. 北京算法创意第三工作室. 保留所有权利.</p>         
-    </footer>
-    <script>        
-        const poems = [     // 诗句库
-            "春江潮水连海平，海上明月共潮生",
-            "春风得意千秋月，奇遇笠翁道璇玑",
-            "落霞与孤鹜齐飞，秋水共长天一色",
-            "山重水复疑无路，柳暗花明又一村",
-            "长风破浪会有时，直挂云帆济沧海",
-            "三更灯火五更鸡，半卷闲书一局棋"
-        ];        
-        const poemDisplay = document.getElementById('poemDisplay');
-        let currentIndex = -1;
-        let counter = 0;        
-        // 显示随机诗句
-        function showRandomPoem() {
-            // 确保不会连续显示相同的诗句
-            let newIndex;
-            do {
-                newIndex = Math.floor(Math.random() * poems.length);
-            } while (newIndex === currentIndex && poems.length > 1);            
-            currentIndex = newIndex;            
-            // 应用淡出效果
-            poemDisplay.style.opacity = 0;            
-            setTimeout(() => {
-                poemDisplay.textContent = poems[currentIndex];                
-                // 应用淡入效果
-                poemDisplay.style.opacity = 1;                
-                // 更新计数器
-               counter++;
-            }, 1000);
-        }        
-        // 初始加载
-        showRandomPoem();        
-        // 每5秒自动切换一次
-        setInterval(showRandomPoem, 5000);
-    </script>
+  <p>正在跳转…若未跳转，<a href="source/迷失在森林v2/index.html">请点击这里</a></p>
 </body>
 </html>
