@@ -53,6 +53,11 @@
     var hasSave = loadSavePoint();
     setupButtons(hasSave);
 
+    // 按固定栏实际高度精确设置 #story 顶部内边距,避免标题被遮挡
+    adjustStoryPadding();
+    window.addEventListener('resize', adjustStoryPadding, { passive: true });
+    window.addEventListener('orientationchange', function(){ setTimeout(adjustStoryPadding, 120); });
+
     // Set initial save point
     savePoint = story.state.toJson();
 
@@ -65,6 +70,9 @@
 
         var paragraphIndex = 0;
         var delay = 0.0;
+
+        // 重置底部内边距,清除 scrollDown 中为撑大可滚动范围而设置的临时值
+        storyContainer.style.paddingBottom = '';
 
         // Don't over-scroll past new content
         var previousBottomEdge = firstTime ? 0 : contentBottomEdgeY();
@@ -315,8 +323,21 @@
         // Line up top of screen with the bottom of where the previous content ended
         var target = previousBottomEdge;
 
+        // 减去顶部固定栏高度,使滚动目标(分割线/新内容顶部)显示在固定栏下方而非被遮挡
+        var headerBar = document.querySelector('.header-bar');
+        if (headerBar) target -= headerBar.offsetHeight;
+        if (target < 0) target = 0;
+
         // Can't go further than the very bottom of the page
         var limit = outerScrollContainer.scrollHeight - outerScrollContainer.clientHeight;
+
+        // 若分割线位置超出可滚动范围(旧内容多、新内容不足时),撑大底部内边距,
+        // 使分割线能滚动到固定栏下方,而非被钳制到页面底部
+        if (target > limit) {
+            var extraPadding = target - limit + 1;
+            storyContainer.style.paddingBottom = (80 + extraPadding) + 'px';
+            limit = outerScrollContainer.scrollHeight - outerScrollContainer.clientHeight;
+        }
         if( target > limit ) target = limit;
 
         var start = outerScrollContainer.scrollTop;
@@ -338,7 +359,23 @@
     // for growing the container, and deciding how far to scroll.
     function contentBottomEdgeY() {
         var bottomElement = storyContainer.lastElementChild;
-        return bottomElement ? bottomElement.offsetTop + bottomElement.offsetHeight : 0;
+        if (!bottomElement) return 0;
+        // 若末尾是分割线,返回其顶部位置:让 scrollDown 滚动到分割线,
+        // 使分割线显示在视图顶部,新内容从分割线下方开始,符合"跳转到新水平线位置"的预期
+        if (bottomElement.classList && bottomElement.classList.contains('ink-choice-divider')) {
+            return bottomElement.offsetTop;
+        }
+        return bottomElement.offsetTop + bottomElement.offsetHeight;
+    }
+
+    // 按顶部固定栏实际高度精确设置 #story 顶部内边距,
+    // 防止手机竖屏(尤其刘海屏)下故事标题被固定栏半遮挡
+    function adjustStoryPadding() {
+        var headerBar = document.querySelector('.header-bar');
+        if (!headerBar || !storyContainer) return;
+        var headerHeight = headerBar.offsetHeight;
+        // 在固定栏底部下方留 16px 间距
+        storyContainer.style.paddingTop = (headerHeight + 16) + 'px';
     }
 
     // Remove all elements that match the given selector. Used for removing choices after

@@ -116,6 +116,8 @@ h2 {
     margin: 0 auto;
     box-sizing: border-box;
     padding: 16px 20px;
+    /* 避开顶部固定栏(含刘海屏 safe-area),JS 会按实际高度再次精确调整 */
+    padding-top: calc(60px + env(safe-area-inset-top));
     padding-bottom: calc(80px + env(safe-area-inset-bottom));
     background: var(--color-container-bg);
     word-wrap: break-word;
@@ -294,6 +296,8 @@ img {
 @media screen and (max-width: 600px) {
     #story {
         padding: 12px 14px;
+        /* 移动端固定栏可能换行变高,留更大间距 */
+        padding-top: calc(72px + env(safe-area-inset-top));
         padding-bottom: calc(80px + env(safe-area-inset-bottom));
     }
 
