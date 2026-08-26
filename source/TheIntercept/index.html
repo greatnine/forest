@@ -1,39 +1,63 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>The Intercept</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title class="title"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
 
-    <link rel="stylesheet" href="style.css">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-</head>
-
-<body>
-    <div class="outerContainer">
-        <div class="header-bar">
-        <div id="controls" class="buttons">
-          <a href="https://greatnine.github.io/forest/index_stories.html"><!--🌐-->⌂主页</a>
-          <a id="rewind" title="Restart story from beginning"><!--🔁-->↻重启</a>
-          <a id="save1" title="Save progress"><!--✅💾-->▤存档</a>
-          <a id="reload" title="Reload from save point"><!--🔰-->📖读档</a>
-          <a id="theme-switch" title="Switch theme"><!--🌗-->◐主题</a>
-        </div>	
-        <div><p><br></p></div> 
+  <body>
+    <!-- Top navigation bar -->
+    <div class="top-nav">
+      <div class="nav-title-section">
+        <h1 class="nav-title title"></h1>
+        <span class="nav-byline byline"></span>
+      </div>
+      <div class="nav-controls">        
+        <a href="https://greatnine.github.io/forest/index_stories.html" title="退出返回主页">
+          <span class="material-icons-outlined nav-icon">home</span>
+        </a>
+        <a id="rewind" title="从头开始故事">
+          <span class="material-icons-outlined nav-icon">replay</span>
+        </a>
+        <a id="saves-btn" title="存读档">
+          <span class="material-icons-outlined nav-icon">bookmark</span>
+        </a>
+        <a id="settings-btn" title="设置">
+          <span class="material-icons-outlined nav-icon">settings</span>
+        </a>
+      </div>      
+    </div>    
+    <div class="outerContainer">      
+      <!-- Story container -->
+      <div id="story" class="container"></div>
+<!--
+      <span class="material-icons-outlined nav-icon">arrow_back  check close</span>
+      <span class="material-icons-outlined nav-icon">arrow_forward</span>
+-->
     </div>
 
-        <div id="story" class="container">	           
-            <div class="header">	
-                <h1>The Intercept</h1>
-                <!--<h2 class="byline">坚持就是胜利</h2>-->
-            </div>
-        </div>
-    </div>
+    <!-- Scripts - Load in dependency order -->
 
-    <script src="ink.js"></script>
-    <script src="The Intercept.js"></script>
-    <script src="main.js"></script>
-</body>
+    <script src="js/ink.js"></script>
+    <script src="js/notification-manager.js"></script>
+    <script src="js/error-manager.js"></script>
+    <script src="js/markdown.js"></script>
+    <script src="js/dom-helpers.js"></script>
+    <script src="js/tags.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/saves-modal-manager.js"></script>
+    <script src="js/save-system.js"></script>
+    <script src="js/display-manager.js"></script>
+    <script src="js/choice-manager.js"></script>
+    <script src="js/page-manager.js"></script>
+    <script src="js/navigation-manager.js"></script>
+    <script src="js/content-processor.js"></script>
+    <script src="js/story-manager.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
